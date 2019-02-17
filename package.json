@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node-sass src/styles/styles.scss styles.css --output-style expanded && postcss -r styles.css",
     "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
+    "browsersync": "node_modules/browser-sync/dist/bin.js start --server --files \"styles.css, index.html\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -18,8 +19,10 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.4.7",
+    "browser-sync": "^2.26.3",
     "chokidar-cli": "^1.2.1",
     "node-sass": "^4.11.0",
     "postcss-cli": "^6.1.1"
-  }
+  },
+  "dependencies": {}
 }
