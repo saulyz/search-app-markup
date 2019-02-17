@@ -1,0 +1,6 @@
+// Bootstrap configs (overides)
+
+$enable-grid-classes:      false;
+$container-max-widths:     $width__container-max-width;
+$grid-breakpoints:         $width__breakpoints;
+$container-wide-max-width: 1400px;

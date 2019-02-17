@@ -1,1 +1,8 @@
+@import "reboot";
+@import "variables/all";
+@import "mixins/all";
 @import "base/all";
+@import "layout/all";
+
+// UI components
+@import "../components/demo.scss";
