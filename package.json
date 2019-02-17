@@ -1,0 +1,25 @@
+{
+  "name": "ui-academy-markup",
+  "version": "1.0.0",
+  "description": "search app ui markup project",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass src/styles/styles.scss styles.css --output-style expanded && postcss -r styles.css",
+    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "responsive"
+  ],
+  "author": "Saulius Vikerta",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.4.7",
+    "chokidar-cli": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.1"
+  }
+}
