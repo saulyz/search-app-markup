@@ -1,29 +1,29 @@
-.container {
-    margin: 0 auto;
-    @include make-container-max-widths();
-}
-
-.content {
+.page-content {
     display: flex;
     flex-direction: column;
 
-    @include media-breakpoint-up('lg') {
+    @include media-breakpoint-up(lg) {
         flex-direction: row;
     }
 
     .aside {
         order: 1;
 
-        @include media-breakpoint-up('lg') {
+        @include media-breakpoint-up(lg) {
             flex: 0 0 300px;
         }
     }
 
     .main {
         order: 2;
+    }
+}
 
-        @include media-breakpoint-up('lg') {
-            flex: 1 0 auto;
-        }
+.container {
+    margin: 0 auto;
+    @include make-container-max-widths();
+    
+    .content-wrapper {
+        padding: 0 15px;
     }
 }
