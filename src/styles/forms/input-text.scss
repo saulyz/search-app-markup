@@ -3,10 +3,17 @@
     height: 3rem;
     width: 100%;
     max-width: 100%;
-    @include input();
+    font-weight: bold;
+    color: $color__text-body;
+    @include input-border();
+    @include focusable();
     
+    &::placeholder {
+        color: $color__text-muted;
+    }
+
     &:focus {
-        @include input-focus();
+        @include focusable-focus();
     }
 }
 
@@ -24,4 +31,5 @@ $icon-sides: left, right;
 .icon {
     position: absolute;
     padding: .8rem;
+    color: $color__text-muted;
 }

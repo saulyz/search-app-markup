@@ -49,7 +49,7 @@
         cursor: pointer;
 
         &:focus + label::before{
-            @include input-focus();
+            @include focusable-focus();
         }
 
         &:checked + label::after{

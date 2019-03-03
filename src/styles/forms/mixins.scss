@@ -1,8 +1,3 @@
-@mixin input {
+@mixin input-border {
     border: 1px solid $color__input-border;
-    outline: 0;
-}
-
-@mixin input-focus {
-    box-shadow: 0 0 0 2px rgba($color__input-border, .3);
 }

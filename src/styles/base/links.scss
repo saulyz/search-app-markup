@@ -1,0 +1,22 @@
+$color__link: $color__summer-sky;
+
+a {
+    color: $color__link;
+    text-decoration: none;
+    @include focusable();
+
+    &:hover {
+        color: $color__link;
+        text-decoration: underline;
+    }
+
+    &:focus, 
+    &:active {
+        color: darken($color__link, 20%);
+        text-decoration: underline;
+    }
+
+    &:focus {
+        @include focusable-focus();
+    }
+}
