@@ -1,0 +1,21 @@
+.field {
+    margin-bottom: $margin__form-field;
+}
+
+.label {
+    margin-left: 2px;
+    margin-bottom: $margin__form-label;
+    font-weight: bold;
+    line-height: 1.2rem;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.help {
+    margin-top: 2px;
+    font-size: $font-size__small;
+}

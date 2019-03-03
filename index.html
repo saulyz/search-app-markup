@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,13 +30,34 @@
                         <h6>Lorem ipsum is placeholder text</h6>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                         <p><span class="muted">This text is muted</span> / <span class="emphasized">This text is emphasized</span> / and here text is normal again</p>
+                        
                     </div>
                 </div>
             </main>
             <aside class="aside">
                 <div class="container">
                     <div class="content-wrapper">
-                        <p>filters</p>
+                        <h3>Search filters</h3>
+                        <div class="field">
+                            <label class="label" for="field-demo">Field label</label>
+                            <div class="control has-icon-left">
+                                <i class="icon fas fa-film"></i>
+                                <input class="input" type="text" id="field-demo" placeholder="placeholder text">
+                            </div>
+                            <p class="help error">this field has help text</p>
+                        </div>
+                        <div class="field">
+                            <div class="control control--checkbox">
+                                <input class="checkbox" type="checkbox" id="field-checkbox1">
+                                <label class="label" for="field-checkbox1">Some option</label>
+                            </div>
+                        </div>
+                        <div class="field disabled">
+                            <div class="control control--checkbox">
+                                <input disabled class="checkbox" type="checkbox" id="field-checkbox2">
+                                <label class="label" for="field-checkbox2">Disabled option</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </aside>

@@ -1,0 +1,27 @@
+.input {
+    padding: .5rem 1rem;
+    height: 3rem;
+    width: 100%;
+    max-width: 100%;
+    @include input();
+    
+    &:focus {
+        @include input-focus();
+    }
+}
+
+
+// Arrangement for having icons in input field
+$icon-sides: left, right;
+@each $side in $icon-sides {
+    .has-icon-#{$side} {
+        .input {
+            padding-#{$side}: 3rem;
+        }
+    }
+}
+
+.icon {
+    position: absolute;
+    padding: .8rem;
+}

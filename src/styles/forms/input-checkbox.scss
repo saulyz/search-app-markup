@@ -1,0 +1,75 @@
+// https://github.com/flatlogic/awesome-bootstrap-checkbox
+
+.control--checkbox {
+    margin-bottom: 0;
+    padding-left: .8rem;
+
+    label{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0;
+        padding-left: .5rem;
+        line-height: 1.4rem;
+    
+        &::before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: $size__checkbox;
+            height: $size__checkbox;
+            left: 0;
+            margin-left: -2rem;
+            border: 1px solid $color__input-border;
+            
+        }
+
+        .disabled &::before {
+            border-color: $color__text-muted;
+        }
+    
+        &::after{
+            display: inline-block;
+            position: absolute;
+            width: $size__checkbox;
+            height: $size__checkbox;
+            left: 0;
+            top: 0;
+            margin-left: -2rem;
+            padding-left: 2px;
+            font-size: 1rem;
+            color: $color__check;
+            line-height: 1.4;
+        }
+    }
+
+    .checkbox {
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+
+        &:focus + label::before{
+            @include input-focus();
+        }
+
+        &:checked + label::after{
+            font-family: $font-family__icons;
+            content: $icon__check;
+            background-color: $background__check;
+        }
+
+
+        &:disabled{
+            cursor: not-allowed;
+        }
+
+        &:disabled + label{
+            opacity: 0.65;
+
+            &::before{
+                background-color: transparent;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
