@@ -1,5 +1,9 @@
 .field {
     margin-bottom: $margin__form-field;
+
+    &.max-width-600 {
+        max-width: 600px;
+    }
 }
 
 .label {
