@@ -1,7 +1,21 @@
+@mixin breakpoint-up($name, $breakpoints: $width__breakpoints) {
+    $point_name: map-get($breakpoints, $name);
+    @media (min-width: $point_name) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($name, $breakpoints: $width__breakpoints) {
+    $point_name: map-get($breakpoints, $name);
+    @media (max-width: $point_name - 1px) {
+        @content;
+    }
+}
+
 // For each breakpoint, define the maximum width of the container in a media query
-@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $width__breakpoints) {
     @each $breakpoint, $container-max-width in $max-widths {
-        @include media-breakpoint-up($breakpoint, $breakpoints) {
+        @include breakpoint-up($breakpoint, $breakpoints) {
             max-width: $container-max-width;
         }
     }
