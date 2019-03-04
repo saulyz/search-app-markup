@@ -4,9 +4,9 @@
   "description": "search app ui markup project",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass src/styles/styles.scss styles.css --output-style expanded && postcss -r styles.css",
+    "build": "node-sass src/styles/styles.scss src/styles.css --output-style expanded && postcss -r src/styles.css",
     "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
-    "browsersync": "node_modules/browser-sync/dist/bin.js start --server --files \"styles.css, index.html\"",
+    "browsersync": "node_modules/browser-sync/dist/bin.js start --server \"src\" --files \"styles.css, index.html\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
