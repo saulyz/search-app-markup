@@ -17,19 +17,21 @@
     }
 }
 
-
-// Arrangement for having icons in input field
-$icon-sides: left, right;
-@each $side in $icon-sides {
-    .has-icon-#{$side} {
-        .input {
-            padding-#{$side}: 3rem;
+.control {
+    
+    // Arrangement for having icons in input field
+    $icon-sides: left, right;
+    @each $side in $icon-sides {
+        &--has-icon-#{$side} {
+            .input {
+                padding-#{$side}: 3rem;
+            }
         }
     }
-}
 
-.icon {
-    position: absolute;
-    padding: .8rem;
-    color: $color__text-muted;
+    &__icon {
+        position: absolute;
+        padding: .8rem;
+        color: $color__text-muted;
+    }
 }
