@@ -4,9 +4,16 @@ $color__check:        $color__white;
 $background__check:   $color__shuttle-grey;
 $background__button:  $color__shuttle-grey;
 
+// Line heights
+$line-height__button:       2.5rem;
+$line-height__input-normal: 1.4rem;
+
 // Spacing
+$padding__input:     .5rem 1rem;
+$padding__button:    .2rem 1rem;
 $margin__form-field: 1rem;
 $margin__form-label: .25rem;
 
 // Sizes
-$size__checkbox: 1.4rem;
+$size__inputs-buttons: 3rem;
+$size__checkbox:       1.4rem;

@@ -17,6 +17,6 @@ a {
     }
 
     &:focus {
-        @include focusable-focus();
+        @include focusable-active();
     }
 }

@@ -4,13 +4,13 @@
     margin-bottom: 0;
     padding-left: .8rem;
 
-    label{
+    .label {
         position: relative;
         display: inline-block;
         vertical-align: middle;
         margin-bottom: 0;
         padding-left: .5rem;
-        line-height: 1.4rem;
+        line-height: $line-height__input-normal;
     
         &::before{
             content: "";
@@ -39,7 +39,7 @@
             padding-left: 2px;
             font-size: 1rem;
             color: $color__check;
-            line-height: 1.4;
+            line-height: $line-height__input-normal;
         }
     }
 
@@ -48,22 +48,21 @@
         z-index: 1;
         cursor: pointer;
 
-        &:focus + label::before{
-            @include focusable-focus();
+        &:focus + .label::before{
+            @include focusable-active();
         }
 
-        &:checked + label::after{
-            font-family: $font-family__icons;
+        &:checked + .label::after{
             content: $icon__check;
+            font-family: $font-family__icons;
             background-color: $background__check;
         }
-
 
         &:disabled{
             cursor: not-allowed;
         }
 
-        &:disabled + label{
+        &:disabled + .label{
             opacity: 0.65;
 
             &::before{

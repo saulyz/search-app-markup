@@ -1,3 +1,12 @@
 @mixin input-border {
     border: 1px solid $color__input-border;
 }
+
+@mixin button-base {
+    display: inline-block;
+    padding: $padding__button;
+    height: $size__inputs-buttons;
+    font-weight: bold;
+    line-height: $line-height__button;
+    letter-spacing: .5px;
+}

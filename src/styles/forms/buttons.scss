@@ -1,12 +1,7 @@
 .button {
-    padding: .2rem 1rem;
-    height: 3rem;
-    font-weight: bold;
-    line-height: 2.5rem;
-    letter-spacing: .5px;
+    @include button-base();
     color: $color__white;
     background: $background__button;
-    border: 1px solid $background__button;
     @include input-border();
     @include focusable();
     
@@ -16,16 +11,12 @@
 
     &:focus {
         background: darken($background__button, 20%);
-        @include focusable-focus();
+        @include focusable-active();
     }
 }
 
 .button-link {
-    display: inline-block;
-    padding: .2rem 1rem;
-    height: 3rem;
-    font-weight: bold;
-    line-height: 2.5rem;
+    @include button-base();
     color: $color__link;
     border: 1px solid transparent;
     @include focusable();
@@ -36,6 +27,6 @@
 
     &:focus {
         color: darken($color__link, 30%);
-        @include focusable-focus();
+        @include focusable-active();
     }
 }
