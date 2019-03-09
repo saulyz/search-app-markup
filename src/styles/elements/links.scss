@@ -1,6 +1,4 @@
-$color__link: $color__summer-sky;
-
-a {
+.link {
     color: $color__link;
     text-decoration: none;
     @include focusable();

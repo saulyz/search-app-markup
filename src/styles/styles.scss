@@ -1,8 +1,7 @@
-@import "reboot";
 @import "variables/all";
-@import "base/all";
+@import "global/all";
 @import "layout/all";
-@import "forms/all";
+@import "elements/all";
 
 // UI components
 @import "../components/demo.scss";  // section colors

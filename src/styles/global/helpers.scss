@@ -1,5 +1,19 @@
-// Spacing helpers
+// Text visual adjustments
+.disabled { color: $color__text-muted }
+.muted { color: $color__text-muted }
+.emphasized { color: $color__text-emphasized }
 
+// Text position adjustments
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-centered { text-align: center; }
+
+// Block adjustments
+.block-centered {
+    margin: 0 auto;
+}
+
+// Spacing helpers
 $amount: 0;
 $maxAmount: 100;
 $sides: (top, bottom, left, right);

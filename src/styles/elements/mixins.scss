@@ -1,3 +1,11 @@
+@mixin focusable {
+    outline: 0 !important;  // overiding reboot
+}
+
+@mixin focusable-active {
+    box-shadow: 0 0 0 2px rgba($color__input-border, .3);
+}
+
 @mixin input-border {
     border: 1px solid $color__input-border;
 }
