@@ -12,7 +12,7 @@
         padding-left: .5rem;
         line-height: $line-height__input-normal;
     
-        &::before{
+        &::before {
             content: "";
             display: inline-block;
             position: absolute;
@@ -20,15 +20,14 @@
             height: $size__checkbox;
             left: 0;
             margin-left: -2rem;
-            border: 1px solid $color__input-border;
-            
+            @include input-border();
         }
 
         .disabled &::before {
-            border-color: $color__text-muted;
+            @include input-border(disabled);
         }
     
-        &::after{
+        &::after {
             display: inline-block;
             position: absolute;
             width: $size__checkbox;
@@ -48,27 +47,36 @@
         z-index: 1;
         cursor: pointer;
 
-        &:focus + .label::before{
-            @include focusable-active();
-        }
-
-        &:checked + .label::after{
+        &:checked + .label::after {
             content: $icon__check;
             font-family: $font-family__icons;
             background-color: $background__check;
         }
 
-        &:disabled{
+        &:disabled {
             cursor: not-allowed;
         }
 
-        &:disabled + .label{
-            opacity: 0.65;
+        &:disabled + .label {
+            color: $color__text-muted;
 
-            &::before{
+            &::before {
                 background-color: transparent;
                 cursor: not-allowed;
             }
+
+            &::after {
+                background-color: $color__text-muted;
+                cursor: not-allowed;
+            }
+        }
+
+        &:focus + .label::before {
+            @include focusable-active();
+        }
+
+        &:checked:focus + .label::after {
+            background-color: darken($background__check, 20%);
         }
     }
 }

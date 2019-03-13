@@ -3,11 +3,14 @@
 }
 
 @mixin focusable-active {
-    box-shadow: 0 0 0 2px rgba($color__input-border, .3);
+    box-shadow: 0 0 0 2px rgba($color__input-border, .4);
 }
 
-@mixin input-border {
+@mixin input-border ($state: normal) {
     border: 1px solid $color__input-border;
+    @if $state == 'disabled' {
+        border-color: $color__text-muted;
+    }
 }
 
 @mixin button-base {

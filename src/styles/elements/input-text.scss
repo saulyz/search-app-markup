@@ -9,7 +9,7 @@
     @include focusable();
     
     &::placeholder {
-        color: $color__text-muted;
+        color: lighten($color__text-muted, 10%);
     }
 
     &:focus {
@@ -17,9 +17,17 @@
     }
 }
 
+.field {
+
+    &.disabled .input {
+        @include input-border(disabled);
+        cursor: not-allowed;
+    }
+}
+
 .control {
-    
     // Arrangement for having icons in input field
+    
     $icon-sides: left, right;
     @each $side in $icon-sides {
         &--has-icon-#{$side} {
