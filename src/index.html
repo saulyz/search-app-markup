@@ -13,19 +13,26 @@
         <header class="header">
             <div class="container">
                 <div class="content-wrapper">
-                    <div class="search pt-60 pb-15">
-                        <h1 class="text-centered pb-15">App title placeholder</h1>
-                        <div class="field max-width-600 block-centered">
-                            <div class="control control--has-icon-left">
-                                <i class="control__icon fas fa-film"></i>
-                                <input class="input" type="text" id="field-demo" placeholder="placeholder text">
-                                <button class="button">
-                                    SEARCH
-                                </button>
+                    <form role="search">
+                        <div class="search pt-60 pb-15">
+                            <h1 class="text-centered pb-15">App title placeholder</h1>
+                            <div class="field max-width-600 block-centered">
+                                <div class="control control--has-icon-left">
+                                    <i class="control__icon fas fa-film"></i>
+                                    <input class="input" 
+                                        type="search" 
+                                        id="field-search" 
+                                        name="q" 
+                                        placeholder="any text phrase to search" 
+                                        aria-label="Search through app content"
+                                    >
+                                    <button class="button">
+                                        SEARCH
+                                    </button>
+                                </div>
+                                <p class="help error">this field has help text</p>
                             </div>
-                            <p class="help error">this field has help text</p>
                         </div>
-                    </div>
                 </div>
             </div>
         </header>
@@ -40,7 +47,7 @@
                         <h4>Lorem ipsum is placeholder text</h4>
                         <h5>Lorem ipsum is placeholder text</h5>
                         <h6>Lorem ipsum is placeholder text</h6>
-                        <p><a class="link" href="#">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p><a class="link" href="#" aria-label="Read more about Lorem ipsum meaning">Lorem ipsum dolor sit amet</a>, consectetur adipiscing <a class="link" href="#" aria-label="Read more about this topic">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                         <p><span class="muted">This text is muted</span> / <span class="emphasized">This text is emphasized</span> / and here text is normal again</p>
                         
                     </div>
@@ -54,7 +61,7 @@
                             <label class="label" for="field-demo">Field label</label>
                             <div class="control control--has-icon-left">
                                 <i class="control__icon fas fa-star"></i>
-                                <input class="input" type="text" id="field-demo" placeholder="placeholder text">
+                                <input class="input" type="text" id="field-demo" placeholder="popular keywords">
                             </div>
                             <p class="help error">this field has help text</p>
                         </div>
@@ -72,8 +79,15 @@
                             </div>
                             <p class="help error">this field has help text</p>
                         </div>
+                        <div class="field disabled">
+                            <label class="label" for="field-demo">Disabled field label</label>
+                            <div class="control">
+                                <input class="input" disabled type="text" id="field-demo" placeholder="placeholder text">
+                            </div>
+                            <p class="help error">this field has help text</p>
+                        </div>
                         <button class="button">Confirm</button>
-                        <a class="button-link" href="#">Cancel</a>
+                        <button class="button-link" href="#">Cancel</button>
                     </div>
                 </div>
             </aside>

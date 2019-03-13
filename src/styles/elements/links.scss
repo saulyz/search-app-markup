@@ -1,17 +1,15 @@
 .link {
     color: $color__link;
-    text-decoration: none;
+    text-decoration: underline;
     @include focusable();
 
     &:hover {
         color: $color__link;
-        text-decoration: underline;
     }
 
     &:focus, 
     &:active {
-        color: darken($color__link, 20%);
-        text-decoration: underline;
+        color: darken($color__link, 30%);
     }
 
     &:focus {

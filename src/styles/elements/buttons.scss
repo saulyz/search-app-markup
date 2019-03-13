@@ -13,6 +13,10 @@
         background: darken($background__button, 20%);
         @include focusable-active();
     }
+
+    &:active {
+        color: darken($color__white, 20%);
+    }
 }
 
 .button-link {
@@ -26,7 +30,11 @@
     }
 
     &:focus {
-        color: darken($color__link, 30%);
+        color: darken($color__link, 10%);
         @include focusable-active();
+    }
+
+    &:active {
+        color: darken($color__link, 30%);
     }
 }
