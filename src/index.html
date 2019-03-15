@@ -16,19 +16,35 @@
                     <form role="search">
                         <div class="search pt-60 pb-15">
                             <h1 class="text-centered pb-15">App title placeholder</h1>
-                            <div class="field max-width-600 block-centered">
+                            <div class="autocomplete field max-width-600 block-centered">
                                 <div class="control control--has-icon-left">
                                     <i class="control__icon fas fa-film"></i>
-                                    <input class="input" 
-                                        type="search" 
-                                        id="field-search" 
-                                        name="q" 
-                                        placeholder="any text phrase to search" 
-                                        aria-label="Search through app content"
+                                    <input class="input"
+                                           id="movies-autocomplete" 
+                                           type="search"   
+                                           role="combobox" 
+                                           aria-autocomplete="list" 
+                                           aria-expanded="false" 
+                                           autocomplete="off" 
+                                           name="q"
+                                           value=""
+                                           placeholder="any text phrase to search" 
+                                           aria-label="Search through app content"
                                     >
-                                    <button class="button">
-                                        SEARCH
-                                    </button>
+                                    <div class="menu">
+                                        <div class="item">
+                                            <span class="title">First entry</span>
+                                            <span class="meta">Some helper meta text</span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Second entry</span>
+                                            <span class="meta">Some helper meta text</span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Third entry</span>
+                                            <span class="meta">Some helper meta text</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <p class="help error">this field has help text</p>
                             </div>
@@ -40,54 +56,37 @@
             <main class="main">
                 <div class="container">
                     <div class="content-wrapper">
-                        <p>search results</p>
-                        <h1>Lorem ipsum is placeholder text</h1>
-                        <h2>Lorem ipsum is placeholder text</h2>
-                        <h3>Lorem ipsum is placeholder text</h3>
-                        <h4>Lorem ipsum is placeholder text</h4>
-                        <h5>Lorem ipsum is placeholder text</h5>
-                        <h6>Lorem ipsum is placeholder text</h6>
-                        <p><a class="link" href="#" aria-label="Read more about Lorem ipsum meaning">Lorem ipsum dolor sit amet</a>, consectetur adipiscing <a class="link" href="#" aria-label="Read more about this topic">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <p><span class="muted">This text is muted</span> / <span class="emphasized">This text is emphasized</span> / and here text is normal again</p>
-                        
+                        <div class="mb-30">
+                            <h3>Search results</h3>
+                        </div>
+                        <article class="card mb-30">
+                            <div class="card__header">
+                                <div class="asset-meta">7.7 / 37.155 / 11135</div>
+                                <h2 class="asset-title">Harry Potter and the Chamber of Secrets</h2>
+                            </div>
+                            <div class="card__body">
+                                <div class="asset-meta">2002-11-13</div>
+                                <div class="asset-meta">Original title: Harry Potter and the Chamber of Secrets</div>
+                                <div class="asset-meta">Original language: EN</div>
+                                <div class="asset-description">Ignoring threats to his life, Harry returns to Hogwarts to investigate – aided by Ron and Hermione – a mysterious series of attacks.</div>
+                                <button class="button mt-30">Add to list</button>
+                            </div>
+                            <div class="card__thumbnail">
+                                <img class="asset-poster" 
+                                     src="https://via.placeholder.com/500x750?text=POSTER+IMAGE" 
+                                     alt="Harry Potter and the Chamber of Secrets movie poster"
+                                >
+                            </div>
+                        </article>                        
                     </div>
                 </div>
             </main>
             <aside class="aside">
                 <div class="container">
                     <div class="content-wrapper">
-                        <h3>Search filters</h3>
-                        <div class="field">
-                            <label class="label" for="field-demo-1">Field label</label>
-                            <div class="control control--has-icon-left">
-                                <i class="control__icon fas fa-star"></i>
-                                <input class="input" type="text" id="field-demo-1" placeholder="popular keywords">
-                            </div>
-                            <p class="help error">this field has help text</p>
-                        </div>
-                        <div class="field">
-                            <div class="control control--checkbox">
-                                <input class="checkbox" type="checkbox" id="field-checkbox1">
-                                <label class="label" for="field-checkbox1">Some option</label>
-                            </div>
-                            <p class="help error">this field has help text</p>
-                        </div>
-                        <div class="field disabled">
-                            <div class="control control--checkbox">
-                                <input disabled checked class="checkbox" type="checkbox" id="field-checkbox2">
-                                <label class="label" for="field-checkbox2">Disabled checked option</label>
-                            </div>
-                            <p class="help error">this field has help text</p>
-                        </div>
-                        <div class="field disabled">
-                            <label class="label" for="field-demo-2">Disabled field label</label>
-                            <div class="control">
-                                <input class="input" disabled type="text" id="field-demo-2" placeholder="placeholder text">
-                            </div>
-                            <p class="help error">this field has help text</p>
-                        </div>
-                        <button class="button">Confirm</button>
-                        <button class="button-link" href="#">Cancel</button>
+                        <h3>My Favourites</h3>
+                        <p>10 items in the list</p>
+                        <button class="button-link">Manage</button>
                     </div>
                 </div>
             </aside>
