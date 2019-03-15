@@ -9,7 +9,7 @@
 @mixin input-border ($state: normal) {
     border: 1px solid $color__input-border;
     @if $state == 'disabled' {
-        border-color: $color__text-muted;
+        border-color: lighten($color__text-muted, 30%);
     }
 }
 

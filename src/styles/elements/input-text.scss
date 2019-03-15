@@ -20,6 +20,7 @@
 .field {
 
     &.disabled .input {
+        background-color: darken($color__white, 10%);
         @include input-border(disabled);
         cursor: not-allowed;
     }
