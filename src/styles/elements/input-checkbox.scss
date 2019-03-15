@@ -35,10 +35,15 @@
             left: 0;
             top: 0;
             margin-left: -2rem;
-            padding-left: 2px;
+            padding-left: 1px;
             font-size: 1rem;
+            line-height: $line-height__input-normal - .1rem;    // fine tune 
             color: $color__check;
-            line-height: $line-height__input-normal;
+            @include input-border();
+        }
+
+        .disabled &::after {
+            @include input-border(disabled);
         }
     }
 
@@ -61,12 +66,13 @@
             color: $color__text-muted;
 
             &::before {
-                background-color: transparent;
+                background-color: darken($color__white, 10%);
                 cursor: not-allowed;
             }
 
             &::after {
-                background-color: $color__text-muted;
+                color: $color__text-muted;
+                background-color: darken($color__white, 10%);
                 cursor: not-allowed;
             }
         }
